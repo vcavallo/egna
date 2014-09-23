@@ -1,1 +1,9 @@
 <h1>The Home View!</h1>
+<ul>
+  <li ng-repeat="project in projects">
+    <a href="/projects/{{project.id}}">{{ project.thumbnail }}</a>
+    </br>
+    <a href="/projects/{{project.id}}">{{ project.title }}</a>
+    <p>{{ project.caption }}
+  </li>
+</ul>

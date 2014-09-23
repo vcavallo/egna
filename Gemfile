@@ -10,6 +10,7 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.2'
 gem 'bower-rails'
 gem 'angular-rails-templates'
+gem 'foundation-rails'
 
 
 # Use Uglifier as compressor for JavaScript assets
