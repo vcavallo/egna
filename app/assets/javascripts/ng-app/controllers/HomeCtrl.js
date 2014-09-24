@@ -1,16 +1,7 @@
-angular.module('EgnaApp').controller('HomeCtrl', function ($scope) {
-    $scope.projects = [
-      {
-        id: 1,
-        title: "project two name",
-        thumbnail: "p2-thumb.jpg",
-        caption: "advertising"
-      },
-      {
-        id: 2,
-        title: "project one name",
-        thumbnail: "p1-thumb.jpg",
-        caption: "editorial"
-      }
-    ];
-});
+angular.module('EgnaApp').controller('HomeCtrl', ['$scope', '$resource',
+  function ($scope, $resource) {
+    //$scope.projects = Project.index();
+    var Projects = $resource('/projects');
+    var projects = Projects.get();
+    $scope.projects = projects;
+  }]);
